@@ -11,8 +11,6 @@ public class App
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         BookService bookService =(BookService) context.getBean("bookService");
-        BookRepository bookRepository = (BookRepository) context.getBean("bookRepository");
-        bookService.service();
-        bookRepository.repo();
+        bookService.addBook("Java 21");
     }
 }
