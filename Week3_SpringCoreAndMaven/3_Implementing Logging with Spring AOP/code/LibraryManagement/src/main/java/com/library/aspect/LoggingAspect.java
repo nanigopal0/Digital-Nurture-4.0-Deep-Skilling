@@ -1,13 +1,22 @@
 package com.library.aspect;
 
-import org.springframework.stereotype.Component;
+import org.aspectj.lang.ProceedingJoinPoint;
 
-@Component
 
 public class LoggingAspect {
 
 
-    public void logExecutionTime() {
-        System.out.println("Logging aspect executed!");
+    public Object aroundAdvice(ProceedingJoinPoint joinPoint) {
+        Object obj = null;
+        System.out.println("Logging aspect before call bookService method!");
+        long startTime = System.nanoTime();
+        try {
+            obj = joinPoint.proceed();
+        } catch (Throwable throwable) {
+            System.out.println("Exception occurred: " + throwable.getMessage());
+        }
+        long endTime = System.nanoTime();
+        System.out.println("Logging aspect after call bookService method! Time taken: " + (endTime - startTime) + " ns");
+        return obj;
     }
 }
