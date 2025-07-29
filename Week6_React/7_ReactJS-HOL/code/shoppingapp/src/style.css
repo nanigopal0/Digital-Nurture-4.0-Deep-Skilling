@@ -1,0 +1,23 @@
+.mydiv {
+    color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mydiv tr,
+td,
+table,
+th {
+    border: 1px solid green;
+    text-align: center;
+}
+
+.mydiv table {
+    padding: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
