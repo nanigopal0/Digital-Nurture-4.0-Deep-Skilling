@@ -1,0 +1,6 @@
+.centerdiv{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 100px;
+}

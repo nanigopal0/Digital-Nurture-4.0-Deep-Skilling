@@ -1,0 +1,27 @@
+.centerdiv {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    flex-direction: column;
+}
+
+.listdiv {
+    border: 1px solid black;
+    border-radius: 18px;
+    padding: 8px;
+    margin: 12px 0;
+}
+
+.listdiv img {
+    width: 25vw;
+    height: 25vh;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.outerdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    
+}
